@@ -1,10 +1,14 @@
 package model;
+
+import java.io.Serializable;
+
 /**
  * A linked list node implementation. Single link.
  * @author Lincoln Howard
  * @param <E> The type of data to link.
  */
-public class LinkedListNode <E> {
+@SuppressWarnings("serial")
+public class LinkedListNode <E> implements Serializable {
   /**
    * The data contained by this node.
    */

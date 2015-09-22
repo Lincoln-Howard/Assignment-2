@@ -63,5 +63,4 @@ public class CategoryNode extends LinkedListNode <LinkedList <FoodItem>> impleme
     ret += "\"name\":\"" + name + "\"," + "\"data\":" + data().toJSONString ();
     return ret + "}";
   }
-  
 }
