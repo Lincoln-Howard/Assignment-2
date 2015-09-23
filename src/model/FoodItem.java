@@ -127,7 +127,7 @@ public class FoodItem implements JSONAware, Comparable <FoodItem>, Serializable 
     ret += "\"price\":\"" + price + "\",";
     ret += "\"description\":\"" + description + "\",";
     ret += "\"size\":\"" + size + "\",";
-    ret += "\"quantity\":" + quantity;
+    ret += "\"quantity\":\"" + quantity + "\"";
     return ret + "}";
   }
   

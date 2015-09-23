@@ -51,6 +51,14 @@ public class TestLinkedList {
     list.add (0, "a");
     assertEquals ("[ a , b , c ]", list.toString ());
   }
+  // test contains
+  @Test
+  public void testContains () {
+    list.add ("a");
+    list.add ("b");
+    list.add ("c");
+    assertTrue (list.contains ("a"));
+  }
   // main
   public static void main(String[] args) {
     Result result = JUnitCore.runClasses(TestLinkedList.class);
