@@ -119,7 +119,18 @@ public class FoodItem implements JSONAware, Comparable <FoodItem>, Serializable 
   public int compareTo(FoodItem arg0) {
     return name.toLowerCase ().compareTo (arg0.name ().toLowerCase ());
   }
-
+  public boolean equals (Object o) {
+    try {
+      FoodItem rhs = (FoodItem) o;
+      return rhs.name ().equals (name) && rhs.price ().equals (price) && rhs.description ().equals (description) &&
+          rhs.quantity ().equals (quantity) && rhs.size ().equals (size);
+    } catch (Exception e) {
+      return false;
+    }
+  }
+  public String toString () {
+    return name;
+  }
   @Override
   public String toJSONString() {
     String ret = "{";

@@ -108,18 +108,7 @@ public class LinkedList <E extends Comparable <E>> implements JSONAware, java.ut
   }
   @Override
   public boolean contains(Object o) {
-    // clone the head
-    LinkedListNode <E> node = head;
-    // loop until no more nodes
-    while (node.next () != null) {
-      // check for equality
-      if (node.data ().equals (o))
-        return true;
-      // next node
-      node = node.next ();
-    }
-    // node not found
-    return false;
+    return indexOf (o) != -1;
   }
   // if N is the size of this and M the size of 'c'
   // then the efficiency of this method is
@@ -150,14 +139,11 @@ public class LinkedList <E extends Comparable <E>> implements JSONAware, java.ut
   }
   @Override
   public int indexOf(Object o) {
-    // clone the head
-    LinkedListNode <E> end = head;
-    int i = 0;
-    while (end.next () != null) {
-      if (end.data ().equals (o))
-        return i;
-      i++;
-      end = end.next ();
+    int count = 0;
+    for (E data : this) {
+      if (data.equals (o))
+        return count;
+      count++;
     }
     return -1;
   }

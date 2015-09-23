@@ -1,5 +1,7 @@
 package ui;
 
+import java.io.FileNotFoundException;
+
 import io.JSON;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -18,12 +20,19 @@ public class Main extends Application {
     menu = JSON.read ("menu.json");
     primaryStage.setMaximized (true);
     primaryStage.setScene (new Scene (root));
-    root.setCenter (new MerchantView ());
+    root.setCenter (new AdminView ());
     root.setBottom (null);
     primaryStage.show ();
   }
 
   public static void main (String [] args) {
     Application.launch (args);
+  }
+
+  public static void save() {
+    try {
+      JSON.write ("menu.json", menu);
+    } catch (FileNotFoundException e) {
+    }
   }
 }
