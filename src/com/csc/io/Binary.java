@@ -1,4 +1,4 @@
-package io;
+package com.csc.io;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import model.CategoryList;
+import com.csc.model.CategoryList;
 
 public class Binary {
   

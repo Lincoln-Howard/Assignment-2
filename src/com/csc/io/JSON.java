@@ -1,11 +1,11 @@
-package io;
+package com.csc.io;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-import model.CategoryList;
+import com.csc.model.CategoryList;
 
 /**
  * Utility for writing and reading json objects in files.

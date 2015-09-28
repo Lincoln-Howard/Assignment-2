@@ -1,4 +1,4 @@
-package model;
+package com.csc.model;
 
 import java.io.Serializable;
 

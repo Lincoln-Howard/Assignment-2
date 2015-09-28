@@ -1,4 +1,7 @@
-package ui;
+package com.csc.ui;
+
+import com.csc.model.CategoryNode;
+import com.csc.model.FoodItem;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -11,8 +14,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
-import model.CategoryNode;
-import model.FoodItem;
 
 public class MerchantView extends Pane {
   

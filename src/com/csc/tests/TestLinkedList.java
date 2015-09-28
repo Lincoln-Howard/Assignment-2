@@ -1,10 +1,12 @@
-package tests;
+package com.csc.tests;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
-import model.LinkedList;
+
+import com.csc.model.LinkedList;
+
 import static org.junit.Assert.*;
 import java.util.List;
 

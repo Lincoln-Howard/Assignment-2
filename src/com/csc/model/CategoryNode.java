@@ -1,4 +1,4 @@
-package model;
+package com.csc.model;
 import java.io.Serializable;
 
 import org.json.simple.JSONAware;
@@ -62,5 +62,9 @@ public class CategoryNode extends LinkedListNode <LinkedList <FoodItem>> impleme
     String ret = "{";
     ret += "\"name\":\"" + name + "\"," + "\"data\":" + data().toJSONString ();
     return ret + "}";
+  }
+  @Override
+  public String toString () {
+    return name;
   }
 }

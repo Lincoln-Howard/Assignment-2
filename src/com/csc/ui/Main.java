@@ -1,13 +1,14 @@
-package ui;
+package com.csc.ui;
 
 import java.io.FileNotFoundException;
 
-import io.JSON;
+import com.csc.io.JSON;
+import com.csc.model.CategoryList;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.CategoryList;
 
 public class Main extends Application {
 
@@ -20,7 +21,7 @@ public class Main extends Application {
     menu = JSON.read ("menu.json");
     primaryStage.setMaximized (true);
     primaryStage.setScene (new Scene (root));
-    root.setCenter (new AdminView ());
+    root.setCenter (new ItemListView ());
     root.setBottom (null);
     primaryStage.show ();
   }

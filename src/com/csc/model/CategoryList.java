@@ -1,4 +1,4 @@
-package model;
+package com.csc.model;
 
 import java.util.Iterator;
 
@@ -114,5 +114,24 @@ public class CategoryList extends LinkedList <CategoryNode> {
         count++;
     // if not found, return -1
     return -1;
+  }
+  /**
+   * Finds the item provided if it exists and returns its location.
+   * @param item The item to look for.
+   * @return Two integers. [0] is the index of the category, [1] the items index in the category. 
+   */
+  public int [] find (FoodItem item) {
+    // create return array
+    int [] pos = {-1, -1};
+    // loop over categories
+    for (int i = 0; i < size (); i++)
+      // check
+      if (get (i).data ().contains (item)) {
+        // set locations
+        pos [0] = i;
+        pos [1] = this.get (i).data ().indexOf (item);
+      }
+    // return the position
+    return pos;
   }
 }

@@ -1,4 +1,6 @@
-package ui;
+package com.csc.ui;
+
+import com.csc.model.FoodItem;
 
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -6,7 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import model.FoodItem;
 
 public class AddItemView extends GridPane {
   Label [] lbl;
@@ -36,7 +37,7 @@ public class AddItemView extends GridPane {
     }
     Button submit = new Button ("Submit");
     submit.addEventHandler (MouseEvent.MOUSE_CLICKED, new SubmitHandler ());
-    add (submit, 6, 0, 2, 1);
+    add (submit, 0, 6);
   }
   
   private class SubmitHandler implements EventHandler <MouseEvent> {

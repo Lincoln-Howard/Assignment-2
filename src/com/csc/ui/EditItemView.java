@@ -1,4 +1,8 @@
-package ui;
+package com.csc.ui;
+
+import com.csc.model.CategoryNode;
+import com.csc.model.FoodItem;
+import com.csc.model.LinkedList;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,9 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import model.CategoryNode;
-import model.FoodItem;
-import model.LinkedList;
 
 public class EditItemView extends BorderPane {
   ObservableList <FoodItem> all;
@@ -51,6 +52,7 @@ public class EditItemView extends BorderPane {
     };
     fields = f;
     for (int i = 0; i < 5; i++) {
+      l [i].setPrefSize (75, 20);
       f [i].setEditable (false);
       f [i].setPrefSize (150, 20);
       grid.add (lbl [i], 0, i);
@@ -58,12 +60,12 @@ public class EditItemView extends BorderPane {
     }
     set = new Button ("Set Item");
     set.addEventHandler (MouseEvent.MOUSE_CLICKED, new SetHandler ());
-    set.setPrefSize (150, 20);
-    grid.add (set, 1, 5, 2, 1);
+    set.setPrefSize (225, 20);
+    grid.add (set, 0, 5, 2, 1);
     remove = new Button ("Remove Item");
     remove.addEventHandler (MouseEvent.MOUSE_CLICKED, new RemoveHandler ());
-    remove.setPrefSize (150, 20);
-    grid.add (remove, 1, 6, 2, 1);
+    remove.setPrefSize (225, 20);
+    grid.add (remove, 0, 6, 2, 1);
   }
   private class SwitchHandler implements EventHandler <MouseEvent> {
     @Override
@@ -95,8 +97,6 @@ public class EditItemView extends BorderPane {
     @Override
     public void handle(MouseEvent event) {
       FoodItem item = list.remove (items.getSelectionModel ().getSelectedIndex ());
-      items = new ListView <FoodItem> (all);
-      all = FXCollections.observableArrayList (list);
       for (CategoryNode category : Main.menu)
         if (category.data ().contains (item))
           category.data ().remove (item);

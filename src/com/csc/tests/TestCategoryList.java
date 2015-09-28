@@ -1,4 +1,4 @@
-package tests;
+package com.csc.tests;
 
 import static org.junit.Assert.*;
 
@@ -10,10 +10,10 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-import io.JSON;
-import model.CategoryList;
-import model.FoodItem;
-import model.LinkedList;
+import com.csc.io.JSON;
+import com.csc.model.CategoryList;
+import com.csc.model.FoodItem;
+import com.csc.model.LinkedList;
 
 public class TestCategoryList {
   // the list
