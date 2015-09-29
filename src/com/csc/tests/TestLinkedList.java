@@ -9,7 +9,10 @@ import com.csc.model.LinkedList;
 
 import static org.junit.Assert.*;
 import java.util.List;
-
+/**
+ * 
+ * @author Lincoln Howard
+ */
 public class TestLinkedList {
   List <String> list = new LinkedList <String> ();
   // test the size method

@@ -13,10 +13,10 @@ import com.csc.model.CategoryList;
  */
 public class JSON {
   /**
-   * 
-   * @param file
-   * @param obj
-   * @throws FileNotFoundException 
+   * Write a category list to file.
+   * @param path The destination of the file.
+   * @param list The list to write to file.
+   * @throws FileNotFoundException If there is an issue opening the file.
    */
   public static void write (String path, CategoryList list) throws FileNotFoundException {
     File file = new File (path);
@@ -25,10 +25,11 @@ public class JSON {
     out.close ();
   }
   /**
-   * 
-   * @param path
-   * @return
-   * @throws FileNotFoundException
+   * Reads a category list from specified file.
+   * @param path The location of the file to read.
+   * @return A CategoryList created from the file. Returns an empty list
+   * if a parse exception is found.
+   * @throws FileNotFoundException If the file can't be opened.
    */
   public static CategoryList read (String path) throws FileNotFoundException {
     File file = new File (path);

@@ -18,7 +18,7 @@ public class Main extends Application {
   
   @Override
   public void start(Stage primaryStage) throws Exception {
-    menu = JSON.read ("menu.json");
+    menu = JSON.read (".menu.json");
     primaryStage.setMaximized (true);
     primaryStage.setScene (new Scene (root));
     root.setCenter (new ItemListView ());
